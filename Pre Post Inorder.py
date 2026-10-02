@@ -20,3 +20,46 @@ def post_order(root):
   post_order(root.left)
   post_order(root.right)
   print(root.data, end="\t")
+  '''
+  preorder
+  1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4  
+Sample Output
+
+1 2 5 3 4 6 
+postorder
+1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4  
+Sample Output
+
+1 2 5 3 4 6 
+Inorder
+
+Sample Input
+
+     1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4  
+Sample Output
+
+1 2 3 4 5 6 """
