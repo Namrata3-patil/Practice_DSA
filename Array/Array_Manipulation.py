@@ -3,6 +3,25 @@
 # SOLUTION: Uses a Difference Array (Prefix Sum) approach to optimize updates to O(1).
 # Instead of iterating through the range [a, b], we mark +k at index 'a' and -k at 'b+1'.
 # A single final pass computes the running prefix sum to find the global maximum in O(n) time.
+'''
+Sample Input
+
+STDIN       Function
+-----       --------
+5 3         arr[] size n = 5, queries[] size q = 3
+1 2 100     queries = [[1, 2, 100], [2, 5, 100], [3, 4, 100]]
+2 5 100
+3 4 100
+Sample Output
+
+200
+Explanation
+
+After the first update the list is 100 100 0 0 0.
+After the second update list is 100 200 100 100 100.
+After the third update list is 100 200 200 200 100.
+ \(O(n *m)\) time
+'''
 
 import math
 import os
@@ -24,8 +43,7 @@ def arrayManipulation(n, queries):
     # Mark the start and end of each range
     for a, b, k in queries:
         arr[a] += k
-        if b + 1 <= n:
-            arr[b + 1] -= k
+        arr[b] -= k 
             
     # Find the maximum value using a running sum
     max_val = 0
