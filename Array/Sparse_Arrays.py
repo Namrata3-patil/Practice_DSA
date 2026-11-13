@@ -1,6 +1,7 @@
 #!/bin/python3
 # Problem: Count the frequency of each query string within a given list of strings.
-# Solution: Use a list comprehension to count occurrences of each query 'q' using 'stringList.count(q)'.
+# Solution: Use a list comprehension to count occurrences of each query 'q' using 'stringList.count(q)
+O(N + Q)'.
 
 import math
 import os
@@ -46,3 +47,25 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
+    '''
+    13
+abcde
+sdaklfj
+asdjf
+na
+basdn
+sdaklfj
+asdjf
+na
+asdjf
+na
+basdn
+sdaklfj
+asdjf
+5
+abcde
+sdaklfj
+asdjf
+na
+basdn
+'''
